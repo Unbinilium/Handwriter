@@ -1,4 +1,4 @@
-// Handwriter v0.1.1 Written by Unbinilium https://unbinilium.github.io/Handwriter/
+// Handwriter v0.1.2 Written by Unbinilium https://unbinilium.github.io/Handwriter/
 
 #pragma once
 #pragma execution_character_set("utf-8")
@@ -26,8 +26,8 @@ using namespace std;
 #define OUT_FILE_FIN       "Writing to file finished!"
 
 #define HTML_TITLE         "Handwriter"
-#define FONT_SIZE_MIN      21
-#define FONT_SIZE_MAX      25
+#define FONT_SIZE_MIN      21.0
+#define FONT_SIZE_MAX      24.5
 #define FONT_SIZE_PRECISON 0.1
 #define MARGIN_MIN         5.0
 #define MARGIN_MAX         5.5
@@ -46,7 +46,7 @@ vector<wchar_t>* InputData_To_Vector_UTF8(const char* argv[])
 	infile.imbue(utf8_locale);
 	if (!infile.is_open())
 	{
-		cout << NOT_FIND_ERR << endl;
+		cerr << NOT_FIND_ERR << endl;
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -78,7 +78,7 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 	outfile.open(argv[2], ios::out | ios::binary);
 	if (!outfile)
 	{
-		cout << OUT_FILE_ERR << endl;
+		cerr << OUT_FILE_ERR << endl;
 		exit(EXIT_FAILURE);
 	}
 	cout << OUT_FILE_STR << argv[2] << endl;
