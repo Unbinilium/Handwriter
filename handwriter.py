@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Handwriter-python3 v0.5.1 Written by Unbinilium https://unbinilium.github.io/Handwriter
+Handwriter-python3 v0.5.2 Written by Unbinilium https://unbinilium.github.io/Handwriter
 Requirements: uuid pillow twine setuptools wheel tox pytest handright
 """
 
@@ -8,7 +8,7 @@ import os
 import sys
 
 if sys.version_info.major < 3:
-    print('Python3 or newer required! Please run "python3 ' + sys.argv[0] + '"again')
+    print('Python3 or newer required! Please run "python3 ' + sys.argv[0] + '" again')
     sys.exit()
 
 try:
@@ -17,7 +17,7 @@ try:
     from handright import Template, handwrite
 except ImportError:
     os.system('pip3 install uuid pillow twine setuptools wheel tox pytest handright')
-    print('Install dependencies finished! Please run "python3 ' + sys.argv[0] + '"again')
+    print('Install dependencies finished! Please run "python3 ' + sys.argv[0] + '" again')
     sys.exit()
 
 print('Please input text file path:')
