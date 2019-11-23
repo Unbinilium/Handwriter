@@ -1,4 +1,4 @@
-// Handwriter v0.1 Written by Unbinilium https://unbinilium.github.io/Handwriter/
+// Handwriter v0.1.1 Written by Unbinilium https://unbinilium.github.io/Handwriter/
 
 #pragma once
 #pragma execution_character_set("utf-8")
@@ -95,7 +95,7 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 	outfile << "a.NoteRef{text-decoration:none}hr{height:1px;padding:0;margin:1em 0;border:0;border-top:1px solid #CCC}table{border:1px solid black;border-spacing:0px;width:100%}td{border:1px solid black}";
 	for (long int i = 1; i <= p->size(); i++)
 	{
-		outfile << ".T" << i << "{font-family:'" << (int)RANDOM_NUM(1, *argc - 2, 1) << "'; font-size:" << (float)RANDOM_NUM(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_PRECISON) << "pt;}";
+		outfile << ".T" << i << "{font-family:'" << (int)RANDOM_NUM(1, *argc - 2, 1) << "';font-size:" << (float)RANDOM_NUM(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_PRECISON) << "pt;}";
 	}
 	outfile << "</style></head><body>";
 	outfile << "<p style=\"margin-bottom:" << (float)RANDOM_NUM(MARGIN_MIN, MARGIN_MAX, MARGIN_PRECISION) << "pt;\">";
