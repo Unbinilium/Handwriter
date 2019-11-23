@@ -28,6 +28,17 @@ handwriter.cpp "/handwriter-master/example.txt" "/handwriter-master/example.html
 ```
 It simply convert `example.txt` to `example.html` with  handwriting-liked font style, so it's convenient to use different types fonts which only determined by your browser. Also the path formart is flexible, local path or URL are both ok.
 
+For further customization like *HTML Title*, *Font Size* and *Magin Space*, edit the `#define` in `handwriter.cpp`:
+```cpp
+#define HTML_TITLE         "Handwriter"
+#define FONT_SIZE_MIN      21
+#define FONT_SIZE_MAX      25
+#define FONT_SIZE_PRECISON 0.1
+#define MARGIN_MIN         5.0
+#define MARGIN_MAX         5.5
+#define MARGIN_PRECISION   0.01
+```
+
 Lastly double click to **open the generated HTML in your browser** and print it with your printer, fake handwriting got!
 
 ## What's more
