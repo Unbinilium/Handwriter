@@ -1,4 +1,4 @@
-// Handwriter-cpp v0.3 Written by Unbinilium https ://unbinilium.github.io/Handwriter/
+// Handwriter-cpp v0.3.0 Written by Unbinilium https ://unbinilium.github.io/Handwriter/
 
 #pragma once
 #pragma execution_character_set("utf-8")
