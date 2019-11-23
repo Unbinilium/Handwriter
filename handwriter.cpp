@@ -1,4 +1,4 @@
-// Handwriter v0.2.0 Written by Unbinilium https ://unbinilium.github.io/Handwriter/
+// Handwriter-cpp v0.3 Written by Unbinilium https ://unbinilium.github.io/Handwriter/
 
 #pragma once
 #pragma execution_character_set("utf-8")
@@ -120,7 +120,7 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 
 int main(int argc, const char* argv[])
 {
-    if (argc < 4)
+    if (argc < 3)
     {
         cerr << argv[0] << USAGE << endl;
         exit(EXIT_FAILURE);
