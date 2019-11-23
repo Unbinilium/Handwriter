@@ -1,4 +1,4 @@
-// Handwriter v0.1.2 Written by Unbinilium https://unbinilium.github.io/Handwriter/
+// Handwriter v0.1.3 Written by Unbinilium https ://unbinilium.github.io/Handwriter/
 
 #pragma once
 #pragma execution_character_set("utf-8")
@@ -26,8 +26,8 @@ using namespace std;
 #define OUT_FILE_FIN       "Writing to file finished!"
 
 #define HTML_TITLE         "Handwriter"
-#define FONT_SIZE_MIN      21.0
-#define FONT_SIZE_MAX      24.5
+#define FONT_SIZE_MIN      21
+#define FONT_SIZE_MAX      25
 #define FONT_SIZE_PRECISON 0.1
 #define MARGIN_MIN         5.0
 #define MARGIN_MAX         5.5
@@ -46,7 +46,7 @@ vector<wchar_t>* InputData_To_Vector_UTF8(const char* argv[])
 	infile.imbue(utf8_locale);
 	if (!infile.is_open())
 	{
-		cerr << NOT_FIND_ERR << endl;
+		cout << NOT_FIND_ERR << endl;
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -78,7 +78,7 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 	outfile.open(argv[2], ios::out | ios::binary);
 	if (!outfile)
 	{
-		cerr << OUT_FILE_ERR << endl;
+		cout << OUT_FILE_ERR << endl;
 		exit(EXIT_FAILURE);
 	}
 	cout << OUT_FILE_STR << argv[2] << endl;
@@ -89,16 +89,16 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 	for (int i = 1; i < *argc - 2; i++) 
 	{
 		cout << OUT_FILE_FONT << argv[i + 2] << endl;
-		outfile << "@font-face{font-family:'" << i << "';src:url(" << argv[i + 2] << ")}";
+		outfile << "@font-face{font-family:'" << to_wstring(i) << "';src:url(" << argv[i + 2] << ")}";
 	}
 	cout << OUT_FILE_STYLE << p->size() << endl;
 	outfile << "a.NoteRef{text-decoration:none}hr{height:1px;padding:0;margin:1em 0;border:0;border-top:1px solid #CCC}table{border:1px solid black;border-spacing:0px;width:100%}td{border:1px solid black}";
-	for (long int i = 1; i <= p->size(); i++)
+	for (int i = 1; i <= p->size(); i++)
 	{
-		outfile << ".T" << i << "{font-family:'" << (int)RANDOM_NUM(1, *argc - 2, 1) << "';font-size:" << (float)RANDOM_NUM(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_PRECISON) << "pt;}";
+		outfile << ".T" << to_wstring(i) << "{font-family:'" << to_wstring((int)RANDOM_NUM(1, *argc - 2, 1)) << "';font-size:" << to_wstring((float)RANDOM_NUM(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_PRECISON)) << "pt;}";
 	}
 	outfile << "</style></head><body>";
-	outfile << "<p style=\"margin-bottom:" << (float)RANDOM_NUM(MARGIN_MIN, MARGIN_MAX, MARGIN_PRECISION) << "pt;\">";
+	outfile << "<p style=\"margin-bottom:" << to_wstring((float)RANDOM_NUM(MARGIN_MIN, MARGIN_MAX, MARGIN_PRECISION)) << "pt;\">";
 	cout << OUT_FILE_TEXT << p->size() << endl;
 	for (it = p->begin(); it != p->end(); ++it)
 	{
@@ -106,11 +106,11 @@ void OutputData_From_Vector(vector<wchar_t>* p, int* argc, const char* argv[])
 		if (*it == (wchar_t)'\n')
 		{
 			c++;
-			outfile << "</p><p style=\"margin-bottom:" << (float)RANDOM_NUM(MARGIN_MIN, MARGIN_MAX, MARGIN_PRECISION) << "pt;\">";
+			outfile << "</p><p style=\"margin-bottom:" << to_wstring((float)RANDOM_NUM(MARGIN_MIN, MARGIN_MAX, MARGIN_PRECISION)) << "pt;\">";
 		}
 		else
 		{
-			outfile << "<span class=\"T" << c++ << "\">" << *it << "</span>";
+			outfile << "<span class=\"T" << to_wstring(c++) << "\">" << *it << "</span>";
 		}
 	}
 	outfile << "</p></body></html>";
