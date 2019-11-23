@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Handwriter-python v0.5 Written by Unbinilium https://unbinilium.github.io/Handwriter
+Handwriter-python3 v0.5.0 Written by Unbinilium https://unbinilium.github.io/Handwriter
 Requirements: uuid pillow twine setuptools wheel tox pytest handright
 """
 
