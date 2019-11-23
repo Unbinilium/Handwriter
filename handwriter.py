@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Handwriter-python3 v0.5.0 Written by Unbinilium https://unbinilium.github.io/Handwriter
+Handwriter-python3 v0.5.1 Written by Unbinilium https://unbinilium.github.io/Handwriter
 Requirements: uuid pillow twine setuptools wheel tox pytest handright
 """
 
 import os
 import sys
 
-pythonver = sys.version_info.major
-if pythonver < 3:
+if sys.version_info.major < 3:
     print('Python3 or newer required! Please run "python3 ' + sys.argv[0] + '"again')
     sys.exit()
 
