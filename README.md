@@ -51,7 +51,7 @@ For further customization, please edit the *Handwriter-python3 configuration fil
     "end_chars":"，。,."
 }
 ```
-Type setting parameter defination is here. For strengthen text sharpness and clarity, using large paper size(`background_width`, `background_hight`) and big `font_size` are always recommended. Please notice the parameter `line_spacing` should always larger than `font_size`. If you considering the word spacing is too big, set it to a negative number.
+The basic type settings parameters defination are here. For strengthen text sharpness and clarity, using large paper size(`background_width`, `background_hight`) and big `font_size` is always recommended. Please notice the parameter `line_spacing` should always larger than `font_size`. If you considering the word spacing is too big, set it to a negative number.
 ```txt
  -  ______________________________________________________
  ^  | Paper                             ^                |
@@ -75,7 +75,7 @@ Type setting parameter defination is here. For strengthen text sharpness and cla
  |  |             | bottom_margin                        |
  v  |             v                                      |
  -  |____________________________________________________|
-    |<                 background_wight                 >|
+    |<                 background_width                 >|
 ```
 Normally parameter `font_color` is set to `0` as *black color* and `background_color` is set to `1` as *white color*, using color profile type *Gray*. Also the `background_color`type could be `str`, in this case `background_color`stands for a *background picture file path*, try this if you want to use a custom background image.
 
