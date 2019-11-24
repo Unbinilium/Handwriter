@@ -126,7 +126,7 @@ Currently handwriter-cpp is only a very simple idea and in a very low level of c
 
 For more really handwriting generation, more degrees of freedom transform is required, such as horizontal position, vertical position and font size. And the whole of each word should be randomly disturbed including its stroke rotation angle. Also random but not temporarily random, algorithm for pen pressure, nit move speed and so on is required. And it better to use mechanical arm to simulating handwriting instead of printer.
 
-I wrote this program just for fun and learn characters encode principle deeper by practicing. Obviously to make this perfect, using C++ and HTML is not a good idea, please try [**Handwriter-python3**](## Handwriter-python3 Usage) instead.
+I wrote this program just for fun and learn characters encode principle deeper by practicing. Obviously to make this perfect, using C++ and HTML is not a good idea, please try [**Handwriter-python3**](#Handwriter-python3-Usage) instead.
 
 ## Author & Acknowledge
 Handwriter Written by <a href="https://github.com/Unbinilium" target="_blank">Unbinilium</a>. All font presets are from Internet, some Chinese font from  <a href="https://www.hanyi.com.cn/" target="_blank">HanYi</a>.
