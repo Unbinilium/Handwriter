@@ -35,20 +35,20 @@ For further customization, please edit the *Handwriter-python3 configuration fil
     "background_width":2480,
     "background_hight":3500,
     "font_color":"black",
-    "font_size":100,
+    "font_size":80,
     "font_size_sigma":2,
     "perturb_x_sigma":2,
     "perturb_y_sigma":2,
     "perturb_theta_sigma":0.05,
     "line_spacing":80,
     "line_spacing_sigma":3,
-    "word_spacing":-15,
+    "word_spacing":-30,
     "word_spacing_sigma":3,
     "left_margin":150,
     "top_margin":150,
     "right_margin":150,
     "bottom_margin":150,
-    "end_chars":"，。,."
+    "end_chars":"，。》？；：’”】｝、！％）,.>?;:]}!%)′″℃℉"
 }
 ```
 All the `*_path` should be specialized. Then run `handwriter.py` with argument *configuration file path* by `python3 handwriter.py <configuration file path>`.
