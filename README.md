@@ -31,18 +31,18 @@ For further customization, please edit the *Handwriter-python3 configuration fil
     "text_file_path":"~/*.txt",
     "font_file_path":"~/*.ttf",
     "output_path":"~/",
-    "background_color":1,
+    "background_color":"white",
     "background_width":2480,
     "background_hight":3500,
-    "font_color":0,
-    "font_size":80,
+    "font_color":"black",
+    "font_size":100,
     "font_size_sigma":2,
     "perturb_x_sigma":2,
     "perturb_y_sigma":2,
     "perturb_theta_sigma":0.05,
     "line_spacing":80,
     "line_spacing_sigma":3,
-    "word_spacing":-30,
+    "word_spacing":-15,
     "word_spacing_sigma":3,
     "left_margin":150,
     "top_margin":150,
@@ -53,7 +53,7 @@ For further customization, please edit the *Handwriter-python3 configuration fil
 ```
 All the `*_path` should be specialized. Then run `handwriter.py` with argument *configuration file path* by `python3 handwriter.py <configuration file path>`.
 
-The basic type settings parameters defination are here. For strengthen text sharpness and clarity, using large paper size(`background_width`, `background_hight`) and big `font_size` is always recommended. Please notice the parameter `line_spacing` should always larger than `font_size`. If you considering the word spacing is too big, set it to a negative number.
+The basic type settings parameters definition are here. For strengthen text sharpness and clarity, using large paper size(`background_width`, `background_hight`) and big `font_size` is always recommended. Please notice the parameter `line_spacing` should always larger than `font_size`. If you considering the word spacing is too big, set it to a negative number.
 ```txt
  -  ______________________________________________________
  ^  | Paper                             ^                |
@@ -79,9 +79,9 @@ The basic type settings parameters defination are here. For strengthen text shar
  -  |____________________________________________________|
     |<                 background_width                 >|
 ```
-Normally parameter `font_color` is set to `0` as *black color* and `background_color` is set to `1` as *white color*, using color profile type *Gray*. Also the `background_color`type could be `str`, in this case `background_color`stands for a *background picture file path*, try this if you want to use a custom background image.
+Normally parameter `font_color` is set to `black` and `background_color` is set to `white`, using *RGBA* color profile and feel free to set color by specializing the color name . Also the `background_color` could be a *picture file path*, in this case `background_color`stands for a *background picture file path*, try this if you want to use a custom background image.
 
-The parameter `*_sigma` is always determined by the handwriting-liked font you have used, always change it to which perfectly matches your custom font manually. For example `"font_size_sigma":2` means randomly disturbing character's size in range `font_size ± 2`. Similarly `"perturb_theta_sigma":0.05` means randomly disturbing character stroke rotation radius. To avoid some special character like `，。,.` appear at the line indent, which is not following writing conventions and looks strange, specialize parameter `end_chars` is required.
+The parameter `*_sigma` means random disturbing range and is always determined by the handwriting-liked font you have used, always change it to which perfectly matches your custom font manually. For example `"font_size_sigma":2` means randomly disturbing character's size in range `font_size ± 2`. Similarly `"perturb_theta_sigma":0.05` means randomly disturbing character stroke rotation radius in range `horizontal ± 0.05`. To avoid some special character like `，。》？；：’”】｝、！％）,.>?;:]}!%)′″℃℉` appear at the line indent, which is not following generally writing conventions which looks strange, specialize parameter `end_chars` is required.
 
 ## Handwriter-cpp Features
 - **Generate handwriting-liked** text for printing from text file
