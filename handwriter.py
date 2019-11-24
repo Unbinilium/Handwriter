@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Handwriter-python3 v0.6.2 Written by Unbinilium https://unbinilium.github.io/Handwriter
+Handwriter-python3 v0.6.5 Written by Unbinilium https://unbinilium.github.io/Handwriter
 Requirements: uuid pillow twine setuptools wheel tox pytest handright
 """
 
@@ -56,7 +56,7 @@ else:
         configuration_dict = json.load(open(sys.argv[1], encoding='utf-8'))
         text_file_path = configuration_dict['text_file_path']
         output_path = configuration_dict['output_path']
-        background_color = configuration_dict['background_color']       
+        background_color = configuration_dict['background_color']
         if os.path.isfile(background_color):
             background_temp = Image.open(background_color).resize((configuration_dict['background_width'], configuration_dict['background_hight']), resample=Image.LANCZOS)
         else:
