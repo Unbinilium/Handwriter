@@ -51,6 +51,8 @@ For further customization, please edit the *Handwriter-python3 configuration fil
     "end_chars":"，。,."
 }
 ```
+All the `*_path` should be specialized. Then run `handwriter.py` with argument *configuration file path* by `python3 handwriter.py <configuration file path>`.
+
 The basic type settings parameters defination are here. For strengthen text sharpness and clarity, using large paper size(`background_width`, `background_hight`) and big `font_size` is always recommended. Please notice the parameter `line_spacing` should always larger than `font_size`. If you considering the word spacing is too big, set it to a negative number.
 ```txt
  -  ______________________________________________________
