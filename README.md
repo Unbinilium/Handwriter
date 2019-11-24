@@ -79,7 +79,7 @@ The basic type settings parameters defination are here. For strengthen text shar
 ```
 Normally parameter `font_color` is set to `0` as *black color* and `background_color` is set to `1` as *white color*, using color profile type *Gray*. Also the `background_color`type could be `str`, in this case `background_color`stands for a *background picture file path*, try this if you want to use a custom background image.
 
-The parameter `*_sigma` is always determined by the handwriting-liked font you have used, always change it to which perfectly matches your custom font manually. For example `"font_size_sigma":2` means randomly disturbing character's size in range `font_size ± 2`. Similarly `"perturb_theta_sigma":0.05` means randomly disturbing character stroke rotation radius.
+The parameter `*_sigma` is always determined by the handwriting-liked font you have used, always change it to which perfectly matches your custom font manually. For example `"font_size_sigma":2` means randomly disturbing character's size in range `font_size ± 2`. Similarly `"perturb_theta_sigma":0.05` means randomly disturbing character stroke rotation radius. To avoid some special character like `，。,.` appear at the line indent, which is not following writing conventions and looks strange, specialize parameter `end_chars` is required.
 
 ## Handwriter-cpp Features
 - **Generate handwriting-liked** text for printing from text file
