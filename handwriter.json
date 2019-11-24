@@ -1,0 +1,23 @@
+{
+    "text_file_path":"~/*.txt",
+    "font_file_path":"~/*.ttf",
+    "output_path":"~/",
+    "background_color":1,
+    "background_width":2480,
+    "background_hight":3500,
+    "font_color":0,
+    "font_size":80,
+    "font_size_sigma":2,
+    "perturb_x_sigma":2,
+    "perturb_y_sigma":2,
+    "perturb_theta_sigma":0.05,
+    "line_spacing":80,
+    "line_spacing_sigma":3,
+    "word_spacing":-30,
+    "word_spacing_sigma":3,
+    "left_margin":150,
+    "top_margin":150,
+    "right_margin":150,
+    "bottom_margin":150,
+    "end_chars":"，。,."
+}
