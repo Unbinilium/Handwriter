@@ -10,7 +10,7 @@
 ## Handwriter-python3 Test  Environment
 - macOS 10.15 with Python 3.7.4
 - Windows 10 20H1 Professional with Python 3.7.4 (x64)
-- Ubuntu 19.10 with Python 3.7.4 (x64)
+- Ubuntu 19.10 with Python 3.6.9 (64bit)
 
 ## Handwriter-python3 Usage
 Firstly, you have to **download** `handwriter.py` or copy its source code to you IDE. If you want to use custom configuration or font presets, just clone Handwriter directly:
@@ -63,7 +63,7 @@ The basic type settings parameters definition are here. For strengthen text shar
  c  |       - ------------       ------------ ^          |
  k  |       ^ | ******** |       | ******** | | line_    |
  g  | font_ | |    **    |       | **    ** | |          |
- r  |  size | |    **    |       | **    ** | | spacing  |
+ r  | size  | |    **    |       | **    ** | | spacing  |
  o  |       v |    **    |       | ******** | v          |
  u  |       - ------------       ------------ -          |
  n  |         |-----------------------------|< -------- >|
@@ -77,7 +77,7 @@ The basic type settings parameters definition are here. For strengthen text shar
  |  |             | bottom_margin                        |
  v  |             v                                      |
  -  |____________________________________________________|
-    |<                 background_width                 >|
+    |<-------          background_width          ------->|
 ```
 Normally parameter `font_color` is set to `black` and `background_color` is set to `white`, using *RGBA* color profile and feel free to set color by specializing the color name . Also the `background_color` could be a *picture file path*, in this case `background_color`stands for a *background picture file path*, try this if you want to use a custom background image.
 
