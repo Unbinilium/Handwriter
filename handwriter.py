@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Handwriter-python3 v0.6.7 Written by Unbinilium https://unbinilium.github.io/Handwriter
+Handwriter-python3 v0.6.9 Written by Unbinilium https://unbinilium.github.io/Handwriter
 Requirements: uuid pillow twine setuptools wheel tox pytest handright
 """
 
@@ -20,7 +20,7 @@ try:
     from multiprocessing import Pool
     from handright import Template, handwrite
 except ImportError:
-    os.system('pip3 install uuid pillow twine setuptools wheel tox pytest handright')
+    os.system('pip3 install --user uuid pillow twine setuptools wheel tox pytest handright')
     print('Install dependencies finished!', usage)
     os.system('python3 ' + sys.argv[0] + ' ' + str('' if len(sys.argv) < 1 else sys.argv[1]))
     sys.exit()
